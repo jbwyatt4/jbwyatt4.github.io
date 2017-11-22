@@ -1,0 +1,5 @@
+To run on http://localhost:4000, the watch flag at the end serves up new changes
+bundle exec jekyll serve --watch
+
+to build into _site and have it watch for changes
+jekyll build --watch

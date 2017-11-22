@@ -1,0 +1,17 @@
+/*sass/bootstrap tutorial for http://veithen.github.io/2015/03/26/jekyll-bootstrap.html*/
+@import "variables";
+
+/* example, can delete, SASS sets comments as the first to receive so place before bootstrap. */
+.tag-cloud span { 
+  font-size: 0.7*$font-size-base;
+  vertical-align: super
+}
+
+@import "bootstrap";
+@import "bootstrap/mixins";
+@import "bootstrap/normalize";
+@import "bootstrap/print";
+@import "bootstrap/scaffolding";
+@import "bootstrap/type";
+@import "bootstrap/grid";
+@import "bootstrap/responsive-utilities";
