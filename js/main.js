@@ -1,4 +1,4 @@
-// handles the navbar scrolling
+// handles the navbar expanding
 $(window).scroll(function(){
   if($('.navbar').offset().top > 50){
     $('.navbar-fixed-top').addClass('top-nav-collapse');
@@ -7,7 +7,7 @@ $(window).scroll(function(){
   }
 })
 
-// handles animation
+// handles animation for page scrolls
 $(function(){
   $('.page-scroll a').bind('click', function(){
     var $anchor = $(this);
