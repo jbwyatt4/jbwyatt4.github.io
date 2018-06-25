@@ -1,3 +1,3 @@
-bundle install
 git pull
+bundle install
 ./startdev.sh
