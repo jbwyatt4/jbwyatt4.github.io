@@ -1,27 +1,23 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
-    <url>
-        <loc>http://jbwyatt4.com/404.html</loc>
-        <lastmod>2018-12-02T15:37:42-08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://jbwyatt4.com/blog/</loc>
-        <lastmod>2019-09-06T21:11:18-07:00</lastmod>
-    </url>
-    <url>
-        <loc>http://jbwyatt4.com/games.html</loc>
-        <lastmod>2020-02-16T23:55:59-08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://jbwyatt4.com/</loc>
-        <lastmod>2019-12-16T12:54:41-08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://jbwyatt4.com/assets/css/main.css</loc>
-        <lastmod>2019-01-08T19:47:39-08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://jbwyatt4.com/react_portfolio.html</loc>
-        <lastmod>2019-01-08T19:47:39-08:00</lastmod>
-    </url>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://jbwyatt4.com/games.html</loc>
+    <lastmod>2020-07-03T15:05:57-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jbwyatt4.com/</loc>
+    <lastmod>2020-07-01T19:13:11-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jbwyatt4.com/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>http://jbwyatt4.com/tags/</loc>
+  </url>
+  
 </urlset>
