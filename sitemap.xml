@@ -3,6 +3,46 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://jbwyatt4.com/blog/</loc>
+    <lastmod>2020-08-03T00:54:50-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jbwyatt4.com/tags/draft/</loc>
+    <lastmod>2020-08-03T00:54:50-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jbwyatt4.com/tags/flatpak/</loc>
+    <lastmod>2020-08-03T00:54:50-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jbwyatt4.com/blog/2020/how_to_revert_snaps_and_my_thoughts_on_snaps/</loc>
+    <lastmod>2020-08-03T00:54:50-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jbwyatt4.com/tags/linux/</loc>
+    <lastmod>2020-08-03T00:54:50-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jbwyatt4.com/tags/linux-dev/</loc>
+    <lastmod>2020-08-03T00:54:50-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jbwyatt4.com/tags/snap/</loc>
+    <lastmod>2020-08-03T00:54:50-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jbwyatt4.com/tags/</loc>
+    <lastmod>2020-08-03T00:54:50-07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://jbwyatt4.com/games.html</loc>
     <lastmod>2020-07-03T15:05:57-07:00</lastmod>
   </url>
@@ -19,10 +59,6 @@
   
   <url>
     <loc>https://jbwyatt4.com/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>https://jbwyatt4.com/tags/</loc>
   </url>
   
 </urlset>

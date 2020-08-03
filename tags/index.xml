@@ -6,9 +6,55 @@
     <description>Recent content in Tags on John Wyatt&#39;s Portfolio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Mon, 03 Aug 2020 00:54:50 -0700</lastBuildDate>
     
 	<atom:link href="https://jbwyatt4.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>draft</title>
+      <link>https://jbwyatt4.com/tags/draft/</link>
+      <pubDate>Mon, 03 Aug 2020 00:54:50 -0700</pubDate>
+      
+      <guid>https://jbwyatt4.com/tags/draft/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>flatpak</title>
+      <link>https://jbwyatt4.com/tags/flatpak/</link>
+      <pubDate>Mon, 03 Aug 2020 00:54:50 -0700</pubDate>
+      
+      <guid>https://jbwyatt4.com/tags/flatpak/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>https://jbwyatt4.com/tags/linux/</link>
+      <pubDate>Mon, 03 Aug 2020 00:54:50 -0700</pubDate>
+      
+      <guid>https://jbwyatt4.com/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux dev</title>
+      <link>https://jbwyatt4.com/tags/linux-dev/</link>
+      <pubDate>Mon, 03 Aug 2020 00:54:50 -0700</pubDate>
+      
+      <guid>https://jbwyatt4.com/tags/linux-dev/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>snap</title>
+      <link>https://jbwyatt4.com/tags/snap/</link>
+      <pubDate>Mon, 03 Aug 2020 00:54:50 -0700</pubDate>
+      
+      <guid>https://jbwyatt4.com/tags/snap/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

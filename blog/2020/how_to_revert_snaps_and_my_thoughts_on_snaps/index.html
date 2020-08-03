@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  
+  
+    
+    <meta name="description" content="There was a post on Hacker News a few days ago that got some attention. One dev&rsquo;s CLion snap updated and that update broke his plugins. So he ranted on how you have no control over Ubuntu&rsquo;s &lsquo;forced&rsquo; Snap system instead of reading the docs. ">
+  
+  <meta name="keywords" content="HTML5, CSS, JavaScript, ReactJS, React Native, Android, iOS, JQuery, Bootstrap, Materialize, Java, Python, Rails, Ruby, Ruby on Rails, C, C++, C/C++, Linux, Ubuntu">
+  <link rel="canonical" href="https://jbwyatt4.com/blog/2020/how_to_revert_snaps_and_my_thoughts_on_snaps/" />
+  <link rel="icon" href="/assets/img/favicon-transparent.ico">
+  <title>How To Revert Snaps &amp; My Thoughts on Snaps | John Wyatt&#39;s Portfolio</title>
+  <meta property="og:title" content="How To Revert Snaps &amp; My Thoughts on Snaps" />
+<meta property="og:description" content="After a rant on Hacker News on Snaps I point out how to easily revert your Snap and give my thoughts." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jbwyatt4.com/blog/2020/how_to_revert_snaps_and_my_thoughts_on_snaps/" />
+<meta property="article:published_time" content="2020-08-03T00:54:50-07:00" />
+<meta property="article:modified_time" content="2020-08-03T00:54:50-07:00" />
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How To Revert Snaps &amp; My Thoughts on Snaps"/>
+<meta name="twitter:description" content="After a rant on Hacker News on Snaps I point out how to easily revert your Snap and give my thoughts."/>
+
+  
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-2415733-12', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+</head>
+
+<body>
+
+<header>
+  <nav class="nav-wrapper teal lighten-1">
+    <div class="container">
+      <a href="/" class="brand-logo">
+        John Wyatt's Portfolio
+      </a>
+      <a href="#" class="sidenav-trigger" data-target="mobile-menu">
+        <i class="material-icons">menu</i>
+      </a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/#about">About Me</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/#projects">Projects</a></li>
+        
+        <li><a href="/#books">Books</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+      <ul class="sidenav grey lighten-2" id="mobile-menu">
+        <li><a href="/#about">About Me</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/#projects">Projects</a></li>
+        
+        <li><a href="/#books">Books</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<div id="content">
+<div class="container">
+  <div id="blog_post" class="section large-content-section center-align">
+    <article class="left-align article">
+      <h1 class="">How To Revert Snaps &amp; My Thoughts on Snaps</h1>
+      <div class="">
+        <p class="grey-text text-darken-2">by John B. Wyatt IV</p>
+        <p class="grey-text text-darken-2"><time>August 3, 2020</time> |
+          6  minutes </p>
+        <ul>
+          
+            <li><a href="https://jbwyatt4.com/tags/draft/">draft</a></li>
+          
+            <li><a href="https://jbwyatt4.com/tags/snap/">snap</a></li>
+          
+            <li><a href="https://jbwyatt4.com/tags/flatpak/">flatpak</a></li>
+          
+            <li><a href="https://jbwyatt4.com/tags/linux/">linux</a></li>
+          
+            <li><a href="https://jbwyatt4.com/tags/linux-dev/">linux dev</a></li>
+          
+        </ul>
+      </div>
+      <div class="content">
+        <p>There was a post on Hacker News a few days ago that got some attention. One dev&rsquo;s CLion snap updated and that update broke his plugins. So he ranted on how you have no control over Ubuntu&rsquo;s &lsquo;forced&rsquo; Snap system instead of reading the docs.</p>
+<p>First, for those who do not know; Snaps are a wonderful tool. They solve a lot of issues with modern Linux packaging systems that Windows users never have to deal with. I make good use of the Visual Studio Code and hugo snaps to have the latest versions of these tools on my desktop.</p>
+<p>On Windows, if an new version of software that you update breaks you can just uninstall and download the old installer like on <a href="http://www.oldversion.com">oldversion.com</a>. On Linux, once you update you are stuck with that version. I found that out the hard way on Manjaro when an update to Atom broke a common plugin. I had assumed it would be fixed quickly so I ignored it and it was cleaned out of my package cache. As the weeks went by I found out it was a deeper issue in Chrome which Atom as an Electron app, that builds on Chrome was dependent on. This update issue was eventually fixed with another update, but it gave me anxiety as a Linux user.</p>
+<p>Sure you can do things like apt pinning if you know of the issue in advance, but that doesn&rsquo;t help your main Debian based (Ubuntu/PopOS) workstation. You can revert on Arch family (Manjaro) workstations, assuming you have the old version in the cache, and assuming a dependency is not broken. Please do not even mention compiling from source-setting the proper flags and installing the needed packages is enough to make most people move to Windows and not look back. And yes, I am aware that Windows is moving away from this with forced Windows system updates and the Microsoft Store.</p>
+<p>But when you a professional you need to have control over the software you make your living off of. When you can freely download old versions of Blender, Gimp, or OBS to run on your Windows box it makes it difficult to recommend Linux to Windows users if they ask about this. (Do not get me wrong; when Windows Antivirus takes up 30% of CPU usage on a quad core-it makes it very easy to recommend Linux.) Especially when you a professional that advocates for Free and Open Source Software that gives control to the users.</p>
+<p>Snaps (and Flatpaks) really do help you on this. They allow you to revert to the last version.</p>
+<p>Here&rsquo;s how for Hugo (a static site generator):</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">  $ sudo snap revert hugo
+hugo reverted to 0.74.2</code></pre></div>
+<p>and to move back to the latest version:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">  $ sudo snap refresh hugo
+hugo <span class="o">(</span>extended/stable<span class="o">)</span> 0.74.3 from Hugo Authors refreshed</code></pre></div>
+<p>This is so much easier to for new users. The tech illumni like</p>
+<p>I found myself experimenting by trying out different distros like Fedora and Debian because I know I will have an updated version of many of my tools.</p>
+<p>There are issues with Snap.</p>
+<ol>
+<li>you can only revert to the previous version, and, 2) only if you already had it on your computer.</li>
+</ol>
+<p>I found 2) out after removing my vscode snap to try out the vscode flatpak and then reinstalling:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">  $ sudo snap revert code
+error: cannot revert <span class="s2">&#34;code&#34;</span>: no version to revert to</code></pre></div>
+<p>Also, <a href="https://snapcraft.io/docs/getting-started#heading--revert">according to the docs.</a> if you need to revert a version, and an update after the broken update is published, you will be &lsquo;refreshed&rsquo; (updated) to the latest version. <a href="https://news.ycombinator.com/item?id=24019467">One commenter in Hacker News said that RockerChat had an issue with the Linux version and held off updates to the snap until it was fixed because of this limitation.</a></p>
+<p>Some Snaps do have channels that you can set to.</p>
+<p>For example you can set the blender snap to Blender&rsquo;s first LTS release with:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">  $ sudo snap install blender --channel<span class="o">=</span>2.83lts/stable --classic</code></pre></div>
+<p>Blender actually keeps older unsupported versions in channels that you can switch to as a solution.</p>
+<p>But apps with legacy channel options, or even LTS channel options, are few and far between. Most are like Firefox or Google Chrome. You only have one version or beta branches. If you do not like it, tough.</p>
+<p>You should hear the stories of the Youtubers I watch complaining about Adobe Premiere&rsquo;s forced updates on Windows.</p>
+<p>That still makes me nervous. This is a container solution and it is trivial to keep older versions of apps compared to the overall work of making the container solution. You are an adult-if you want to run an older version and accept the risks that is your choice. Often you have little choice when you have a deadline and a sudden update requires time to learn/fix plugins that may not have right now.</p>
+<p>As a solution I decided to take a quick look at Flatpak. The vscode flatpak was outdated but it does seem to have it&rsquo;s own revert functionality that goes beyond one version.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">  $ sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+  $ sudo flatpak install flathub com.visualstudio.code
+  $ sudo flatpak run com.visualstudio.code . <span class="c1"># open vscode project in current folder</span></code></pre></div>
+<p>The flatpak runs in it&rsquo;s own config folder so you do not need to worry about your current config being overwritten, just worry about setting it in ~/.var/app/com.visualstudio.code</p>
+<p>You can view the older versions with:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">  $ flatpak remote-info --log flathub com.visualstudio.code</code></pre></div>
+<p>and there are a lot of older versions.</p>
+<p>I picked &lsquo;Update code.deb to 1.39.1 (b368100d)&rsquo; for the &lsquo;lulz&rsquo; (1.47.3 was the latest at the time of writing and 1.47.1 was the current one installed by Flatpak):</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">  $ sudo flatpak update --commit<span class="o">=</span>4f0a78a534afa92f2f614d02eba490b5b478ca1e95c1ed85e61a261751b0d907 com.visualstudio.code</code></pre></div>
+<p>it errored out on Kubuntu 20.04:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">Error: com.visualstudio.code not installed
+Updates complete.
+error: There were one or more errors</code></pre></div>
+<p>Picked a more recent version (Update code.deb to 1.46.1-1592428892):</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">  $ sudo flatpak update --commit<span class="o">=</span>ed3fd69932437f72c0598a878e4aa260ee3668fa3f375b244e3a07e9922d47a1 com.visualstudio.code</code></pre></div>
+<p>and I finished writing up this post in it.</p>
+<p>Flatpak has it&rsquo;s own issues that I will talk about in a future post. Canonical is the offering the Snap service for free, but I do feel they should offer more options for legacy versions. Until they do, I feel Flatpak does have it&rsquo;s place, despite being more difficult to use for console users at the least. I just feel more comfortable having this kind of control over the tools I use. <a href="https://unix.stackexchange.com/a/552700/271659">Thanks to ajgringo619 for the great post on Stack Overflow.</a></p>
+
+      </div>
+    </article>
+
+  </div>
+  
+</div>
+<div id="email_capture_sumo" class="teal lighten-1">
+  <script async>(function(s,u,m,o,j,v){j=u.createElement(m);v=u.getElementsByTagName(m)[0];j.async=1;j.src=o;j.dataset.sumoSiteId='da7a45dc92d43daec9fedbef74a0427d1e086ef3c9b1945d932c959acaffe208';v.parentNode.insertBefore(j,v)})(window,document,'script','//load.sumo.com/');</script>
+  <span data-sumome-listbuilder-embed-id="bbcc3c40fd029b872352d694e8f10a0649b854195c6a536f1094ece0df8f14fa"></span>
+  <p id="tosprivacypolicy">Please see my <a href="https://jbwyatt4.com/tosandprivacypolicy/">privacy policy.</a></p>
+</div>
+
+        </div>
+<footer class="page-footer grey darken-3">
+  <div class="footer-copyright">
+    <div class='container'>
+      <div class="center-align">&copy; 2017-2020 John B. Wyatt IV</div>
+      <br />
+      <div class="center-align">This website uses icons that are trademarked and copyrighted by other organizations for reference purposes. No infringement is intended.</div>
+      <br />
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+  $(document).ready(function(){
+    
+    M.AutoInit();
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+      
+    
+    
+
+    
+    
+
+    
+    
+  });
+</script>
+
+
+
+  
+
+
+<link rel="stylesheet"
+      href="https://jbwyatt4.com/scss/main.min.56450c440be25bcf5e304e670eb0c906610b6699930bd1368cc0171c1536612d.css"
+      integrity="sha256-VkUMRAviW89eME5nDrDJBmELZpmTC9E2jMAXHBU2YS0=">
+</body>
+</html>

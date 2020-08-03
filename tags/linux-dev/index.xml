@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linux dev on John Wyatt&#39;s Portfolio</title>
+    <link>https://jbwyatt4.com/tags/linux-dev/</link>
+    <description>Recent content in linux dev on John Wyatt&#39;s Portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 03 Aug 2020 00:54:50 -0700</lastBuildDate>
+    
+	<atom:link href="https://jbwyatt4.com/tags/linux-dev/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How To Revert Snaps &amp; My Thoughts on Snaps</title>
+      <link>https://jbwyatt4.com/blog/2020/how_to_revert_snaps_and_my_thoughts_on_snaps/</link>
+      <pubDate>Mon, 03 Aug 2020 00:54:50 -0700</pubDate>
+      
+      <guid>https://jbwyatt4.com/blog/2020/how_to_revert_snaps_and_my_thoughts_on_snaps/</guid>
+      <description>There was a post on Hacker News a few days ago that got some attention. One dev&amp;rsquo;s CLion snap updated and that update broke his plugins. So he ranted on how you have no control over Ubuntu&amp;rsquo;s &amp;lsquo;forced&amp;rsquo; Snap system instead of reading the docs.</description>
+    </item>
+    
+  </channel>
+</rss>
