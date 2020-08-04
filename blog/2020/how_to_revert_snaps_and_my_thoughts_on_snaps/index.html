@@ -121,7 +121,7 @@ hugo <span class="o">(</span>extended/stable<span class="o">)</span> 0.74.3 from
 <p>I found 2) out after removing my vscode snap to try out the vscode flatpak and then reinstalling the snap:</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">  $ sudo snap revert code
 error: cannot revert <span class="s2">&#34;code&#34;</span>: no version to revert to</code></pre></div>
-<p>Also, <a href="https://snapcraft.io/docs/getting-started#heading--revert">according to the docs.</a> if you need to revert a version, and an update after the broken update is published, you will be &lsquo;refreshed&rsquo; (updated) to the latest version. <a href="https://news.ycombinator.com/item?id=24019467">One commenter in Hacker News said that RockerChat had an issue with the Linux version and held off updates to the snap until it was fixed because of this limitation.</a></p>
+<p>Also with 1). <a href="https://snapcraft.io/docs/getting-started#heading--revert">According to the docs</a>: if you need to revert a version, and an update after the broken update is published, you will be &lsquo;refreshed&rsquo; (updated) to the latest version. <a href="https://news.ycombinator.com/item?id=24019467">One commenter in Hacker News said that RockerChat had an issue with the Linux version and held off updates to the snap until it was fixed because of this limitation.</a></p>
 <p>Some Snaps do have channels that you can set to.</p>
 <p>For example you can set the blender snap to Blender&rsquo;s first LTS release with:</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">  $ sudo snap install blender --channel<span class="o">=</span>2.83lts/stable --classic</code></pre></div>
