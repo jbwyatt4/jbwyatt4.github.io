@@ -126,14 +126,14 @@ error: cannot revert <span class="s2">&#34;code&#34;</span>: no version to rever
 <p>For example you can set the blender snap to Blender&rsquo;s first LTS release with:</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">  $ sudo snap install blender --channel<span class="o">=</span>2.83lts/stable --classic</code></pre></div>
 <p>Blender actually keeps older unsupported versions in channels that you can switch to as a solution.</p>
-<p>But apps with legacy channel options, or even LTS channel options, are few and far between. Most are like Firefox or Google Chrome. You only have one version or beta branches. If you do not like it, tough.</p>
+<p>But apps with legacy channel options, or just LTS channel options, are few and far between. Most are like Firefox or Google Chrome. You only have one version or beta branches. If you do not like it, tough.</p>
 <p>You should hear the stories of the Youtubers I watch complaining about Adobe Premiere&rsquo;s forced updates on Windows.</p>
-<p>That still makes me nervous. This is a container solution and it is trivial to keep older versions of apps compared to the overall work of making the container solution. You are an adult-if you want to run an older version and accept the risks that is your choice. Often you have little choice when you have a deadline and a sudden update requires time to learn/fix plugins that you may not have right now.</p>
+<p>That still makes me nervous. This is a container solution. It is trivial to keep older versions of apps compared to the overall work of making the container solution. You are an adult; if you want to run an older version and accept the risks, that is your choice. Often you have little choice when you have a deadline and a sudden update requires time to learn/fix plugins that you may not have right now.</p>
 <p>As a solution I decided to take a quick look at Flatpak. The vscode flatpak was outdated but it does seem to have it&rsquo;s own revert functionality that goes beyond one version.</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">  $ sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
   $ sudo flatpak install flathub com.visualstudio.code
   $ sudo flatpak run com.visualstudio.code . <span class="c1"># open vscode project in current folder</span></code></pre></div>
-<p>The flatpak runs in it&rsquo;s own config folder so you do not need to worry about your current config being overwritten, just worry about setting it in ~/.var/app/com.visualstudio.code</p>
+<p>The flatpak runs in it&rsquo;s own config folder so you do not need to worry about your current config being overwritten. Just set the config and other settings in ~/.var/app/com.visualstudio.code</p>
 <p>You can view the older versions with:</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">  $ flatpak remote-info --log flathub com.visualstudio.code</code></pre></div>
 <p>and there are a lot of older versions.</p>
@@ -146,7 +146,7 @@ error: There were one or more errors</code></pre></div>
 <p>Picked a more recent version (Update code.deb to 1.46.1-1592428892):</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">  $ sudo flatpak update --commit<span class="o">=</span>ed3fd69932437f72c0598a878e4aa260ee3668fa3f375b244e3a07e9922d47a1 com.visualstudio.code</code></pre></div>
 <p>and I finished writing up this post in it.</p>
-<p>Flatpak has it&rsquo;s own issues that I will talk about in a future post. Canonical is offering the Snap service for free, but I do feel they should offer more options for legacy versions. Until they do, I feel Flatpak does have it&rsquo;s place, despite being more difficult to use for console users at the least. I just feel more comfortable having this kind of control over the tools I use. <a href="https://unix.stackexchange.com/a/552700/271659">Thanks to ajgringo619 for the great post on Stack Overflow.</a></p>
+<p>Flatpak has it&rsquo;s own issues that I will talk about in a future post. Canonical is offering the Snap service for free, but I do feel they should offer more options for legacy versions. Until they do, I feel Flatpak does have it&rsquo;s place, despite being more difficult to use for console users and less adoption by vendors. I just feel more comfortable having this kind of control over the tools I use. <a href="https://unix.stackexchange.com/a/552700/271659">Thanks to ajgringo619 for the great post on Stack Overflow.</a></p>
 
       </div>
     </article>
