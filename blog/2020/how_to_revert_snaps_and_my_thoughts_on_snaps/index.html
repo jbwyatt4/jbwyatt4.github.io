@@ -114,13 +114,13 @@ hugo reverted to 0.74.2</code></pre></div>
 <p>and to move back to the latest version:</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">  $ sudo snap refresh hugo
 hugo <span class="o">(</span>extended/stable<span class="o">)</span> 0.74.3 from Hugo Authors refreshed</code></pre></div>
-<p>This is so much easier to for new users. The tech illumni like</p>
-<p>I found myself experimenting by trying out different distros like Fedora and Debian because I know I will have an updated version of many of my tools.</p>
+<p>This is so much easier for new users-especially when GNOME Software and KDE Discover have Snaps and Flatpaks integrated into their GUI selection screens. No random installers to download from websites they may never have heard from. It is just taken care of for them. The people that post to Hacker News may prefer the freedom to install what they want and worry about the slippery slope of an App Store and the walled garden that may come from it. But I still deal with family members that forget how to maximize a screen window on a desktop, a Windows 10 desktop.</p>
+<p>Also, I found myself experimenting by trying out different distros like Fedora and Debian. I knew I could easily install an updated version of my tools on any distro. Really reduced the burden and anxiety of distro hopping. Snaps are a rising tide that lifts all boats in the Penguin waters.</p>
 <p>There are issues with Snap.</p>
 <ol>
 <li>you can only revert to the previous version, and, 2) only if you already had it on your computer.</li>
 </ol>
-<p>I found 2) out after removing my vscode snap to try out the vscode flatpak and then reinstalling:</p>
+<p>I found 2) out after removing my vscode snap to try out the vscode flatpak and then reinstalling the snap:</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">  $ sudo snap revert code
 error: cannot revert <span class="s2">&#34;code&#34;</span>: no version to revert to</code></pre></div>
 <p>Also, <a href="https://snapcraft.io/docs/getting-started#heading--revert">according to the docs.</a> if you need to revert a version, and an update after the broken update is published, you will be &lsquo;refreshed&rsquo; (updated) to the latest version. <a href="https://news.ycombinator.com/item?id=24019467">One commenter in Hacker News said that RockerChat had an issue with the Linux version and held off updates to the snap until it was fixed because of this limitation.</a></p>
@@ -130,7 +130,7 @@ error: cannot revert <span class="s2">&#34;code&#34;</span>: no version to rever
 <p>Blender actually keeps older unsupported versions in channels that you can switch to as a solution.</p>
 <p>But apps with legacy channel options, or even LTS channel options, are few and far between. Most are like Firefox or Google Chrome. You only have one version or beta branches. If you do not like it, tough.</p>
 <p>You should hear the stories of the Youtubers I watch complaining about Adobe Premiere&rsquo;s forced updates on Windows.</p>
-<p>That still makes me nervous. This is a container solution and it is trivial to keep older versions of apps compared to the overall work of making the container solution. You are an adult-if you want to run an older version and accept the risks that is your choice. Often you have little choice when you have a deadline and a sudden update requires time to learn/fix plugins that may not have right now.</p>
+<p>That still makes me nervous. This is a container solution and it is trivial to keep older versions of apps compared to the overall work of making the container solution. You are an adult-if you want to run an older version and accept the risks that is your choice. Often you have little choice when you have a deadline and a sudden update requires time to learn/fix plugins that you may not have right now.</p>
 <p>As a solution I decided to take a quick look at Flatpak. The vscode flatpak was outdated but it does seem to have it&rsquo;s own revert functionality that goes beyond one version.</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">  $ sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
   $ sudo flatpak install flathub com.visualstudio.code
