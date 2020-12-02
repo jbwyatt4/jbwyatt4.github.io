@@ -5,10 +5,6 @@
     <link>https://jbwyatt4.com/categories/</link>
     <description>Recent content in Categories on John Wyatt&#39;s Portfolio</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://jbwyatt4.com/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="https://jbwyatt4.com/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
